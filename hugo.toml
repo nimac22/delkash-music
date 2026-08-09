@@ -1,0 +1,45 @@
+baseURL = "https://delkash-music.pages.dev/"
+languageCode = "fa-ir"
+defaultContentLanguage = "fa"
+title = "موسیقی دلکش"
+theme = "PaperMod"
+paginate = 10
+
+[languages.fa]
+  languageName = "فارسی"
+  languageDirection = "rtl"
+  weight = 1
+
+[params]
+  description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
+  keywords = ["موسیقی ایرانی", "تصنیف", "آواز", "متن آهنگ", "موسیقی سنتی"]
+  author = "موسیقی دلکش"
+  
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowWordCount = true
+  
+  [params.homeInfoParams]
+    Title = "🎵 موسیقی دلکش"
+    Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
+
+[[menu.main]]
+  name = "صفحه نخست"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "همه تصنیف‌ها"
+  url = "/posts/"
+  weight = 2
+[[menu.main]]
+  name = "برچسب‌ها"
+  url = "/tags/"
+  weight = 3
+
+[sitemap]
+  changefreq = "weekly"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
