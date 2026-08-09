@@ -3,12 +3,14 @@ languageCode = "fa-ir"
 defaultContentLanguage = "fa"
 title = "موسیقی دلکش"
 theme = "PaperMod"
-paginate = 10
 
 [languages.fa]
   languageName = "فارسی"
   languageDirection = "rtl"
   weight = 1
+
+[pagination]
+  pagerSize = 10
 
 [params]
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
