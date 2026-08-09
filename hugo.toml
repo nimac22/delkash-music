@@ -14,9 +14,7 @@ theme = "PaperMod"
 
 [params]
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
-  keywords = ["موسیقی ایرانی", "تصنیف", "آواز", "متن آهنگ", "موسیقی سنتی"]
   author = "موسیقی دلکش"
-  
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowPostNavLinks = true
