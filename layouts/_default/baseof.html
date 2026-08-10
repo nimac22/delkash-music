@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="rtl">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body class="dark" id="top">
+  {{- partial "header.html" . }}
+  <div class="delkash-layout">
+    <main class="main">
+      {{- block "main" . }}{{ end }}
+    </main>
+    {{- partial "sidebar.html" . }}
+  </div>
+  {{- partial "footer.html" . }}
+  {{- partial "extend_footer.html" . }}
+</body>
+</html>
