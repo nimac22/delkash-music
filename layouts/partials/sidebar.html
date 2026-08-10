@@ -1,0 +1,39 @@
+<aside class="delkash-sidebar" aria-label="ستون کناری">
+
+  <div class="widget">
+    <h6>درباره موسیقی دلکش</h6>
+    <p>مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی؛ از اساتید بزرگ تا هنرمندان نوظهور.</p>
+  </div>
+
+  <div class="widget">
+    <h6>آخرین تصنیف‌ها</h6>
+    <ul>
+      {{- range first 5 site.RegularPages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+
+  {{- with site.Taxonomies.categories }}
+  <div class="widget">
+    <h6>آرشیو موضوعی</h6>
+    <ul>
+      {{- range .Alphabetical }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+
+  {{- with site.Taxonomies.tags }}
+  <div class="widget">
+    <h6>برچسب‌ها</h6>
+    <div class="widget-tags">
+      {{- range .Alphabetical }}
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+
+</aside>
