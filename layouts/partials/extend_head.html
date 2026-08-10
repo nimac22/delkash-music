@@ -3,5 +3,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap">
 
-<!-- متا تگ‌های سفارشی -->
+<!-- استایل اختصاصی موسیقی دلکش (لینک مستقیم و قطعی) -->
+{{- with resources.Get "css/custom.css" }}
+  {{- $css := . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- end }}
+
 <meta name="theme-color" content="#151009">
