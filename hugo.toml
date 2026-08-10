@@ -1,4 +1,4 @@
-baseURL = "https://delkash-music.pages.dev/"
+baseURL = "https://nimac22.github.io/delkash-music/"
 languageCode = "fa-ir"
 defaultContentLanguage = "fa"
 title = "موسیقی دلکش"
@@ -14,32 +14,66 @@ theme = "PaperMod"
 
 [params]
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
-  author = "موسیقی دلکش"
-  defaultTheme = "auto"
+  author = "تیم موسیقی دلکش"
+  defaultTheme = "dark"
+  
+  # فعال‌سازی ویژگی‌های PaperMod
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
-  ShowWordCount = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
   
+  # اطلاعات صفحه اصلی
   [params.homeInfoParams]
-    Title = "🎵 موسیقی دلکش"
-    Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
+    Title = "🎵 به موسیقی دلکش خوش آمدید"
+    Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی — با بیش از ۵۰۰ تصنیف ماندگار از اساتید بزرگ"
+  
+  # شبکه‌های اجتماعی (بعداً تکمیل می‌کنیم)
+  [[params.socialIcons]]
+    name = "telegram"
+    url = "https://t.me/delkash_music"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "index.xml"
 
+# منوی اصلی
 [[menu.main]]
+  identifier = "home"
   name = "صفحه نخست"
   url = "/"
   weight = 1
 [[menu.main]]
+  identifier = "posts"
   name = "همه تصنیف‌ها"
   url = "/posts/"
   weight = 2
 [[menu.main]]
-  name = "برچسب‌ها"
+  identifier = "tags"
+  name = "دستگاه‌های موسیقی"
   url = "/tags/"
   weight = 3
+[[menu.main]]
+  identifier = "about"
+  name = "درباره ما"
+  url = "/about/"
+  weight = 4
 
+# اضافه کردن CSS سفارشی
+[params.assets]
+  customCSS = ["css/custom.css"]
+
+# Sitemap و RSS (حیاتی برای سئو)
 [sitemap]
   changefreq = "weekly"
+  priority = 0.5
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# تنظیمات Markdown
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,284 @@
+/* ============================================
+   قالب «موسیقی دلکش» — هویت بصری سایت Hugo
+   ============================================ */
+:root {
+  --bg: #151009;
+  --bg-2: #1c1610;
+  --surface: #241c12;
+  --surface-2: #2d2314;
+  --line: #3d301c;
+  --gold: #e0aa4e;
+  --gold-2: #f3d28f;
+  --ink: #f6eddd;
+  --body: #e9dfcd;
+  --muted: #b6a486;
+  --radius: 16px;
+  --shadow: 0 12px 32px rgba(0,0,0,.38);
+}
+
+/* ---------- بازنویسی متغیرهای PaperMod برای تم تیره گرم ---------- */
+:root {
+  --primary: var(--gold) !important;
+  --theme: var(--bg) !important;
+  --entry: var(--surface) !important;
+  --main-bg: var(--bg) !important;
+  --code-bg: var(--surface-2) !important;
+  --border: var(--line) !important;
+}
+
+/* ---------- بدنه صفحه با بک‌گراند ثابت ---------- */
+body {
+  background-color: var(--bg) !important;
+  background-image: url('/images/background.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  color: var(--ink) !important;
+  font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+}
+
+/* لایه تیره روی بک‌گراند */
+body::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(21,16,9,.85), rgba(21,16,9,.92)) !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* ---------- رنگ‌بندی متن‌ها ---------- */
+.post-content, .post-description, p, li {
+  color: var(--body) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gold-2) !important;
+  font-family: 'Lalezar', 'Vazirmatn', Tahoma, sans-serif !important;
+}
+
+/* ---------- لینک‌ها ---------- */
+a {
+  color: var(--gold-2) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+a:hover {
+  color: var(--gold) !important;
+  text-decoration: none !important;
+}
+
+/* ---------- کارت‌های پست ---------- */
+.first-entry, .post-entry {
+  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius) !important;
+  padding: 24px 26px !important;
+  margin-bottom: 24px !important;
+  box-shadow: var(--shadow) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* نوار طلایی سمت راست کارت */
+.post-entry::before {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 4px !important;
+  background: linear-gradient(180deg, var(--gold), transparent) !important;
+  opacity: 0.75 !important;
+}
+
+.post-entry:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,.5) !important;
+}
+
+/* عنوان پست */
+.post-entry .entry-header h2,
+.first-entry .entry-header h1 {
+  color: var(--ink) !important;
+  font-family: 'Lalezar', sans-serif !important;
+  font-size: 1.6rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 10px !important;
+}
+
+.post-entry .entry-header h2 a {
+  color: var(--ink) !important;
+}
+
+.post-entry .entry-header h2 a:hover {
+  color: var(--gold-2) !important;
+}
+
+/* تاریخ و meta */
+.post-meta, .entry-footer {
+  color: var(--muted) !important;
+  font-size: 0.85rem !important;
+  border-bottom: 1px dashed var(--line) !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 14px !important;
+}
+
+/* خلاصه پست */
+.post-entry .entry-content p,
+.post-description {
+  color: var(--body) !important;
+}
+
+/* ---------- صفحه‌بندی ---------- */
+.pagination a, .pagination span {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--gold-2) !important;
+  border-radius: 12px !important;
+  padding: 10px 22px !important;
+}
+
+.pagination a:hover {
+  background: var(--surface-2) !important;
+  border-color: var(--gold) !important;
+}
+
+/* ---------- تگ‌ها ---------- */
+.post-tags a, .terms-tags a {
+  background: var(--surface-2) !important;
+  color: var(--gold-2) !important;
+  border: 1px solid var(--line) !important;
+  padding: 4px 12px !important;
+  border-radius: 99px !important;
+  font-size: 0.8rem !important;
+  margin: 0 4px 6px 0 !important;
+  display: inline-block !important;
+}
+
+.post-tags a:hover, .terms-tags a:hover {
+  background: var(--gold) !important;
+  color: #241a08 !important;
+  border-color: var(--gold) !important;
+}
+
+/* ---------- بلوک نقل قول ---------- */
+blockquote {
+  border-inline-start: 3px solid var(--gold) !important;
+  background: var(--surface-2) !important;
+  padding: 14px 18px !important;
+  border-radius: 10px !important;
+  color: var(--gold-2) !important;
+  margin: 16px 0 !important;
+}
+
+/* ---------- کد و pre ---------- */
+code, pre {
+  background: var(--surface-2) !important;
+  color: var(--gold-2) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 6px !important;
+}
+
+pre {
+  padding: 14px !important;
+}
+
+/* ---------- تصاویر ---------- */
+.post-content img {
+  border-radius: 12px !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/* ---------- جدول ---------- */
+table {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+th {
+  background: var(--surface-2) !important;
+  color: var(--gold-2) !important;
+  padding: 10px !important;
+}
+
+td {
+  padding: 10px !important;
+  border-top: 1px solid var(--line) !important;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a3a22 !important;
+  border-radius: 8px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold) !important;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--gold) !important;
+  color: #241a08 !important;
+}
+
+/* ---------- جداکننده تزئینی ---------- */
+.delkash-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--gold);
+  opacity: 0.85;
+  margin: 26px 0;
+  font-size: 1.2rem;
+}
+
+.delkash-divider::before,
+.delkash-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* ---------- دکمه‌ها ---------- */
+.button, .buttons {
+  background: linear-gradient(145deg, var(--gold-2), var(--gold)) !important;
+  color: #241a08 !important;
+  border: none !important;
+  border-radius: 99px !important;
+  padding: 10px 24px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(224,170,78,.25) !important;
+  transition: all 0.3s ease !important;
+}
+
+.button:hover, .buttons:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(224,170,78,.4) !important;
+}
+
+/* ---------- موبایل: بک‌گراند scroll ---------- */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+  }
+  
+  .first-entry, .post-entry {
+    padding: 18px !important;
+  }
+}
