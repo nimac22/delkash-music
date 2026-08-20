@@ -1,17 +1,29 @@
 ---
-title: "متن آهنگ خداحافظ هایده | تصنیف آواز دشتی + دانلود"
+title: "خداحافظ هایده"
 date: 2020-05-27
-description: "متن کامل تصنیف خداحافظ با صدای هایده، آهنگ و ترانه از جهانبخش پازوکی در آواز دشتی + دانلود و پخش آنلاین"
-image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_630,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg"
+description: "متن کامل تصنیف خداحافظ با صدای هایده در آواز دشتی، اثر جهانبخش پازوکی"
 tags: ["هایده", "جهانبخش پازوکی", "تصنیف", "دانلود آهنگ"]
 categories: ["آواز دشتی"]
 artist: "هایده"
 composer: "جهانبخش پازوکی"
 lyricist: "جهانبخش پازوکی"
 dastgah: "آواز دشتی"
+cover:
+  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg"
+  hidden: true
 ---
 
-![هایده - تصنیف خداحافظ](https://res.cloudinary.com/wtx6mnrm/image/upload/w_800,h_1000,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg)
+<div class="post-hero">
+  <img src="https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg" alt="هایده">
+  <div class="post-hero-content">
+    <div class="hero-meta">
+      <span>🎤 هایده</span>
+      <span>🎼 آواز دشتی</span>
+      <span>📅 ۱۳۵۶</span>
+    </div>
+    <h1>خداحافظ</h1>
+  </div>
+</div>
 
 ## مشخصات اثر
 
@@ -20,8 +32,15 @@ dastgah: "آواز دشتی"
 | 🎤 خواننده | هایده |
 | 🎵 آهنگ و ترانه | جهانبخش پازوکی |
 | 🎼 دستگاه | آواز دشتی |
+| 📅 سال ضبط | ۱۳۵۶ |
 
-## متن تصنیف خداحافظ
+## پخش آنلاین
+
+<audio controls preload="none">
+  <source src="https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3" type="audio/mpeg">
+</audio>
+
+## متن تصنیف
 
 خوردم قسم تا بعد از این
 با چشم باز عاشق شوم
@@ -34,11 +53,6 @@ dastgah: "آواز دشتی"
 حالا که برهم می‌خورد آرامش فردای ما
 
 **خداحافظ، خداحافظ**
-
-ای تکیه‌گاه ناتوان، از ناامیدی خسته‌ام
-از بیم فرداهای دور، بار سفر را بسته‌ام
-گفتی که در سختی و غم، پشت و پناه من شوی
-در کوره‌راه زندگی، فانوس راه من شوی
 
 ای تکیه‌گاه ناتوان، از ناامیدی خسته‌ام
 از بیم فرداهای دور، بار سفر را بسته‌ام
@@ -50,39 +64,15 @@ dastgah: "آواز دشتی"
 
 **خداحافظ، خداحافظ**
 
-آواز:
-دل خون شد از امید و نشد یار یار من
-ای وای بر من و دل امیدوار من
-
-خوردم قسم تا بعد از این
-با چشم باز عاشق شوم
-حالا که آمد دیگری
-من می‌روم، من می‌روم
-
-**خداحافظ، خداحافظ**
-
-حالا که دست دیگری برهم زده دنیای ما
-حالا که برهم می‌خورد آرامش فردای ما
-
-**خداحافظ، خداحافظ**
-
-**خداحافظ، خداحافظ**
-
-## پخش آنلاین
-
-<audio controls preload="none">
-  <source src="https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3" type="audio/mpeg">
-</audio>
-
-## دانلود
-
-📥 [دانلود آهنگ خداحافظ هایده](https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3)
-
 ## درباره این تصنیف
 
 تصنیف «خداحافظ» یکی از ماندگارترین آثار هایده در آواز دشتی است که آهنگ و ترانه آن را جهانبخش پازوکی سروده است. این اثر با صدای مخملی هایده، به یکی از خاطره‌انگیزترین خداحافظی‌های موسیقی ایرانی تبدیل شده است.
 
+## دانلود
+
+📥 [دانلود آهنگ خداحافظ هایده (کیفیت ۳۲۰)](https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3)
+
 ## تصنیف‌های مرتبط
 
-- [متن آهنگ می‌گریزم مرضیه](/posts/migoryzam-marzieh/)
-- [متن آهنگ دو سه شبه که چشمام به دره مرضیه](/posts/do-se-shab-marzieh/)
+- [می‌گریزم — مرضیه](/posts/migoryzam-marzieh/)
+- [دو سه شبه — مرضیه](/posts/do-se-shab-marzieh/)
