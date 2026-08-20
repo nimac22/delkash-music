@@ -1,0 +1,103 @@
+<div id="floatingPlayer" class="floating-player" style="display:none;">
+  <div class="fp-info">
+    <span class="fp-icon">♪</span>
+    <div>
+      <div class="fp-title" id="fpTitle">در حال پخش...</div>
+      <div class="fp-artist" id="fpArtist">—</div>
+    </div>
+  </div>
+  <audio id="fpAudio" controls></audio>
+  <button class="fp-close" id="fpClose" aria-label="بستن">✕</button>
+</div>
+
+<style>
+.floating-player {
+  position: fixed;
+  bottom: 0;
+  inset-inline: 0;
+  background: rgba(15, 10, 6, 0.96);
+  backdrop-filter: blur(20px) saturate(1.4);
+  border-top: 1px solid var(--line);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 200;
+  box-shadow: 0 -8px 30px rgba(0,0,0,.4);
+}
+.fp-info { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.fp-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  color: #1c1509;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 20px; font-weight: bold;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,162,74,.5); }
+  50% { box-shadow: 0 0 0 10px rgba(212,162,74,0); }
+}
+.fp-title { color: var(--ink); font-size: 0.9rem; font-weight: 600; }
+.fp-artist { color: var(--muted); font-size: 0.78rem; }
+.fp-info > div { min-width: 0; }
+.fp-info > div > div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+.floating-player audio { flex: 1; min-width: 0; height: 40px; }
+.fp-close {
+  background: var(--surface-2);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.fp-close:hover { background: var(--gold); color: #1c1509; }
+@media (max-width: 640px) {
+  .floating-player { padding: 10px 12px; gap: 10px; }
+  .fp-icon { width: 36px; height: 36px; font-size: 16px; }
+  .fp-info > div > div { max-width: 100px; }
+}
+</style>
+
+<script>
+(function(){
+  var player = document.getElementById('floatingPlayer');
+  var audio = document.getElementById('fpAudio');
+  var titleEl = document.getElementById('fpTitle');
+  var artistEl = document.getElementById('fpArtist');
+  var closeBtn = document.getElementById('fpClose');
+
+  // تبدیل audio تگ‌های داخل پست به دکمه پخش
+  document.querySelectorAll('.post-content audio').forEach(function(a){
+    a.style.display = 'none';
+    var src = a.querySelector('source') ? a.querySelector('source').src : a.src;
+    var btn = document.createElement('button');
+    btn.className = 'play-btn';
+    btn.innerHTML = '<span class="play-icon">▶</span> پخش این تصنیف';
+    btn.style.cssText = 'width:100%;background:linear-gradient(135deg,#f0c978,#d4a24a);color:#1c1509;border:none;padding:14px 20px;border-radius:12px;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 14px rgba(212,162,74,.3);transition:all 0.3s;';
+    btn.onmouseenter = function(){ this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 22px rgba(212,162,74,.5)'; };
+    btn.onmouseleave = function(){ this.style.transform=''; this.style.boxShadow='0 4px 14px rgba(212,162,74,.3)'; };
+    
+    btn.onclick = function(){
+      audio.src = src;
+      audio.play();
+      player.style.display = 'flex';
+      titleEl.textContent = document.querySelector('h1, .post-title, .entry-header h2')?.textContent || 'تصنیف';
+      var artistMeta = document.querySelector('.post-meta')?.textContent || '';
+      artistEl.textContent = artistMeta.trim().split('|')[0].trim() || '';
+      document.body.style.paddingBottom = '80px';
+    };
+    a.parentNode.insertBefore(btn, a);
+  });
+
+  closeBtn.onclick = function(){
+    audio.pause();
+    audio.src = '';
+    player.style.display = 'none';
+    document.body.style.paddingBottom = '';
+  };
+})();
+</script>
