@@ -1,571 +1,371 @@
 /* ============================================
-   قالب «موسیقی دلکش» — نسخه ۲ (هماهنگ با بلاگفا)
+   قالب مدرن «موسیقی دلکش» — UX حرفه‌ای
+   الهام: Spotify + Genius + Apple Music
    ============================================ */
 
-/* ---------- پالت رنگی ---------- */
 :root {
-  --bg: #151009;
-  --bg-2: #1c1610;
-  --surface: #241c12;
-  --surface-2: #2d2314;
+  --bg: #0f0a06;
+  --bg-2: #161009;
+  --surface: #1c1509;
+  --surface-2: #241a0e;
+  --surface-3: #2e2214;
   --line: #3d301c;
-  --gold: #e0aa4e;
-  --gold-2: #f3d28f;
-  --ink: #f6eddd;
-  --body-c: #e9dfcd;
-  --muted: #b6a486;
-  --radius: 16px;
-  --shadow: 0 12px 32px rgba(0,0,0,.38);
+  --gold: #d4a24a;
+  --gold-2: #f0c978;
+  --gold-soft: rgba(212, 162, 74, 0.12);
+  --ink: #f5ecdc;
+  --body: #e8dcc5;
+  --muted: #a89678;
+  --faint: #6b5a3e;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.5);
+  --shadow-md: 0 8px 24px rgba(0,0,0,.35);
 }
 
-/* ---------- بازنویسی متغیرهای PaperMod ---------- */
+/* === بازنویسی PaperMod === */
 :root, .dark {
-  --theme: #151009 !important;
-  --entry: #241c12 !important;
-  --primary: #f6eddd !important;
-  --secondary: #b6a486 !important;
-  --tertiary: #6b5a3e !important;
-  --content: #e9dfcd !important;
-  --code-bg: #2d2314 !important;
-  --hljs-bg: #2d2314 !important;
-  --border: #3d301c !important;
+  --theme: var(--bg) !important;
+  --entry: var(--surface) !important;
+  --primary: var(--ink) !important;
+  --secondary: var(--muted) !important;
+  --tertiary: var(--faint) !important;
+  --content: var(--body) !important;
+  --code-bg: var(--surface-2) !important;
+  --border: var(--line) !important;
 }
 
-/* ---------- بک‌گراند ثابت با عکس (اصلاح شده) ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 body {
-  background:
-    linear-gradient(180deg, rgba(21,16,9,.86), rgba(21,16,9,.93)),
-    url("https://i.imgur.com/y0wFdfC.jpeg") center / cover no-repeat fixed !important;
+  background: var(--bg) !important;
+  color: var(--ink) !important;
+  font-family: "Vazirmatn", system-ui, sans-serif !important;
+  line-height: 1.8 !important;
+  background-image: none !important;
+}
+body::before { display: none !important; }
+
+::selection { background: var(--gold); color: #1c1509; }
+
+/* === هدر مینیمال === */
+.site-header, header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  background: rgba(15, 10, 6, 0.75) !important;
+  backdrop-filter: blur(20px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+  border-bottom: 1px solid rgba(61, 48, 28, 0.4) !important;
 }
 
-/* ---------- تایپوگرافی ---------- */
-body, button, input { font-family: "Vazirmatn", Tahoma, sans-serif !important; }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lalezar", "Vazirmatn", Tahoma, sans-serif !important;
-  color: var(--gold-2) !important;
+/* === Hero بخش پست === */
+.post-hero {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 28px;
+  background: var(--surface-2);
+  box-shadow: var(--shadow-lg);
+  isolation: isolate;
 }
-a { color: var(--gold-2) !important; }
-a:hover { color: var(--gold) !important; }
-
-/* ---------- چیدمان دوستونه با سایدبار ---------- */
-.delkash-layout {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 28px;
-  align-items: start;
-}
-.delkash-layout .main {
-  max-width: 100% !important;
+.post-hero img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  border: none !important;
   margin: 0 !important;
-  padding: 24px 0 !important;
-  min-height: auto !important;
+  filter: brightness(0.6) saturate(0.85);
 }
-.delkash-sidebar { position: sticky; top: 96px; display: grid; gap: 20px; }
-
-/* ---------- کارت خوش‌آمد (homeInfo) ---------- */
-.home-info, .first-entry.home-info {
-  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--radius) !important;
-  padding: 30px !important;
-  text-align: center !important;
-  box-shadow: var(--shadow) !important;
-  margin-bottom: 26px !important;
+.post-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    rgba(15,10,6,0) 40%, 
+    rgba(15,10,6,.6) 75%, 
+    rgba(15,10,6,.95) 100%);
+  pointer-events: none;
+}
+.post-hero-content {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  bottom: 0;
+  padding: 28px 32px;
+  z-index: 2;
+  color: var(--ink);
+}
+.post-hero-content h1 {
+  font-family: "Lalezar", "Vazirmatn", sans-serif !important;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem) !important;
+  line-height: 1.3 !important;
+  margin: 0 0 8px !important;
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+}
+.post-hero-content .hero-meta {
+  color: var(--gold-2);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-/* ---------- کارت‌های پست ---------- */
+/* === کارت‌های صفحه اصلی === */
 .post-entry, .first-entry {
-  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
+  background: var(--surface) !important;
   border: 1px solid var(--line) !important;
   border-radius: var(--radius) !important;
-  padding: 24px 26px !important;
-  margin-bottom: 24px !important;
-  box-shadow: var(--shadow) !important;
-  position: relative !important;
+  padding: 0 !important;
+  margin-bottom: 20px !important;
+  overflow: hidden !important;
+  transition: all 0.35s cubic-bezier(.2,.7,.2,1) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.post-entry::before { display: none !important; }
+.post-entry:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--gold) !important;
+}
+
+.post-entry .entry-cover {
+  margin: 0 !important;
+  aspect-ratio: 16 / 9 !important;
   overflow: hidden !important;
 }
-.post-entry::before {
-  content: "" !important;
-  position: absolute !important;
-  right: 0 !important; top: 0 !important; bottom: 0 !important;
-  width: 4px !important;
-  background: linear-gradient(180deg, var(--gold), transparent) !important;
-  opacity: .75 !important;
+.post-entry .entry-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  border: none !important;
+  transition: transform 0.5s ease;
 }
-.post-entry:hover { transform: translateY(-2px); }
-.entry-header h2 a, .entry-header h1 a { color: var(--ink) !important; }
-.entry-header h2 a:hover, .entry-header h1 a:hover { color: var(--gold-2) !important; }
-.post-meta, .entry-meta { color: var(--muted) !important; }
-.entry-content, .post-content, .entry-content p { color: var(--body-c) !important; }
+.post-entry:hover .entry-cover img {
+  transform: scale(1.05);
+}
 
-/* ---------- محتوای پست ---------- */
-.post-content img { border-radius: 12px; border: 1px solid var(--line); }
+.post-entry .entry-header,
+.post-entry .entry-content {
+  padding: 20px 24px !important;
+}
+
+.entry-header h2 {
+  font-family: "Lalezar", "Vazirmatn", sans-serif !important;
+  font-size: 1.35rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 10px !important;
+  color: var(--ink) !important;
+}
+.entry-header h2 a {
+  color: var(--ink) !important;
+  text-decoration: none !important;
+}
+.entry-header h2 a:hover {
+  color: var(--gold-2) !important;
+}
+
+.post-meta, .entry-meta {
+  color: var(--muted) !important;
+  font-size: 0.82rem !important;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.post-meta::before { display: none !important; }
+
+/* === محتوای پست (شعر) — قلب UX === */
+.post-content, .entry-content {
+  font-size: 1.05rem;
+  color: var(--body);
+  line-height: 2.1;
+}
+
+/* متن شعر: بزرگ، خوانا، وسط‌چین */
+.post-content p {
+  margin-bottom: 0.8rem;
+  color: var(--body);
+}
+
+/* عکس داخل متن: کوچک و با گوشه‌های گرد */
+.post-content img {
+  max-width: 280px !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 24px auto !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* تیترهای داخلی */
+.post-content h2, .post-content h3, .post-content h4 {
+  font-family: "Lalezar", "Vazirmatn", sans-serif !important;
+  color: var(--gold-2) !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  position: relative;
+  padding-inline-end: 16px;
+}
+.post-content h2::before {
+  content: "♪";
+  position: absolute;
+  inset-inline-end: 0;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+/* بلوک نقل قول زیبا */
 .post-content blockquote {
   border-inline-start: 3px solid var(--gold) !important;
   background: var(--surface-2) !important;
-  padding: 14px 18px !important;
-  border-radius: 10px !important;
+  padding: 20px 24px !important;
+  border-radius: var(--radius-sm) !important;
+  margin: 24px 0 !important;
   color: var(--gold-2) !important;
+  font-style: italic;
 }
-.post-content table { background: var(--surface) !important; border: 1px solid var(--line) !important; }
-.post-content th { background: var(--surface-2) !important; color: var(--gold-2) !important; padding: 10px !important; }
-.post-content td { padding: 10px !important; border-top: 1px solid var(--line) !important; color: var(--body-c) !important; }
 
-/* ---------- تگ‌ها ---------- */
-.post-tags a, .entry-tags a, .widget-tags a {
+/* === پلیر صوتی مدرن === */
+.post-content audio {
+  width: 100% !important;
+  margin: 24px 0 !important;
+  border-radius: var(--radius-sm) !important;
   background: var(--surface-2) !important;
-  color: var(--gold-2) !important;
+  filter: sepia(0.3) hue-rotate(-10deg);
+}
+
+/* === جدول مشخصات اثر === */
+.post-content table {
+  width: 100%;
+  background: var(--surface-2) !important;
   border: 1px solid var(--line) !important;
-  padding: 4px 12px !important;
-  border-radius: 99px !important;
-  font-size: .78rem !important;
-  display: inline-block;
-  margin: 0 0 6px 6px !important;
-}
-.post-tags a:hover, .entry-tags a:hover, .widget-tags a:hover {
-  background: var(--gold) !important;
-  color: #241a08 !important;
-}
-
-/* ---------- صفحه‌بندی ---------- */
-.pagination a, .pagination .active {
-  background: var(--surface) !important;
-  border: 1px solid var(--line) !important;
-  color: var(--gold-2) !important;
-  border-radius: 12px !important;
-}
-.pagination a:hover { border-color: var(--gold) !important; }
-
-/* ---------- ویجت‌های سایدبار (مشابه بلاگفا) ---------- */
-.widget {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 20px 22px;
-}
-.widget h6 {
-  font-family: "Lalezar", "Vazirmatn", Tahoma !important;
-  font-size: 1.05rem !important;
-  display: flex; align-items: center; gap: 8px;
-  padding: 10px 14px;
-  margin: -20px -22px 14px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-2));
-  color: #241a08 !important;
-  border-radius: var(--radius) var(--radius) 0 0;
-  border-bottom: 2px solid var(--gold-2);
-}
-.widget h6::before { content: "♪"; }
-.widget ul { list-style: none; margin: 0; padding: 0; }
-.widget li { border-bottom: 1px dashed rgba(61,48,28,.7); }
-.widget li:last-child { border-bottom: 0; }
-.widget li a {
-  display: block; padding: 9px 2px;
-  color: var(--ink) !important; text-decoration: none; font-size: .87rem;
-}
-.widget li a::before { content: "◈ "; color: var(--gold); font-size: .72rem; }
-.widget li a:hover { color: var(--gold-2) !important; padding-inline-start: 8px; }
-.widget p { font-size: .87rem; color: var(--body-c); }
-.widget-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-/* ---------- فوتر ---------- */
-.footer { background: var(--bg-2) !important; border-top: 1px solid var(--line) !important; }
-
-/* ---------- اسکرول‌بار و انتخاب ---------- */
-::selection { background: var(--gold) !important; color: #241a08 !important; }
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #4a3a22; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gold); }
-
-/* ---------- موبایل ---------- */
-@media (max-width: 920px) {
-  .delkash-layout { grid-template-columns: 1fr; }
-  .delkash-sidebar { position: static; }
-  body { background-attachment: scroll !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
-}/* ============================================
-   قالب «موسیقی دلکش» — نسخه ۲ (هماهنگ با بلاگفا)
-   ============================================ */
-
-/* ---------- پالت رنگی ---------- */
-:root {
-  --bg: #151009;
-  --bg-2: #1c1610;
-  --surface: #241c12;
-  --surface-2: #2d2314;
-  --line: #3d301c;
-  --gold: #e0aa4e;
-  --gold-2: #f3d28f;
-  --ink: #f6eddd;
-  --body-c: #e9dfcd;
-  --muted: #b6a486;
-  --radius: 16px;
-  --shadow: 0 12px 32px rgba(0,0,0,.38);
-}
-
-/* ---------- بازنویسی متغیرهای PaperMod ---------- */
-:root, .dark {
-  --theme: #151009 !important;
-  --entry: #241c12 !important;
-  --primary: #f6eddd !important;
-  --secondary: #b6a486 !important;
-  --tertiary: #6b5a3e !important;
-  --content: #e9dfcd !important;
-  --code-bg: #2d2314 !important;
-  --hljs-bg: #2d2314 !important;
-  --border: #3d301c !important;
-}
-
-/* ---------- بک‌گراند ثابت با عکس (اصلاح شده) ---------- */
-body {
-  background:
-    linear-gradient(180deg, rgba(21,16,9,.86), rgba(21,16,9,.93)),
-    url("https://i.imgur.com/y0wFdfC.jpeg") center / cover no-repeat fixed !important;
-}
-
-/* ---------- تایپوگرافی ---------- */
-body, button, input { font-family: "Vazirmatn", Tahoma, sans-serif !important; }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lalezar", "Vazirmatn", Tahoma, sans-serif !important;
-  color: var(--gold-2) !important;
-}
-a { color: var(--gold-2) !important; }
-a:hover { color: var(--gold) !important; }
-
-/* ---------- چیدمان دوستونه با سایدبار ---------- */
-.delkash-layout {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 28px;
-  align-items: start;
-}
-.delkash-layout .main {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 24px 0 !important;
-  min-height: auto !important;
-}
-.delkash-sidebar { position: sticky; top: 96px; display: grid; gap: 20px; }
-
-/* ---------- کارت خوش‌آمد (homeInfo) ---------- */
-.home-info, .first-entry.home-info {
-  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--radius) !important;
-  padding: 30px !important;
-  text-align: center !important;
-  box-shadow: var(--shadow) !important;
-  margin-bottom: 26px !important;
-}
-
-/* ---------- کارت‌های پست ---------- */
-.post-entry, .first-entry {
-  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--radius) !important;
-  padding: 24px 26px !important;
-  margin-bottom: 24px !important;
-  box-shadow: var(--shadow) !important;
-  position: relative !important;
+  border-radius: var(--radius-sm) !important;
   overflow: hidden !important;
+  margin: 24px 0 !important;
 }
-.post-entry::before {
-  content: "" !important;
-  position: absolute !important;
-  right: 0 !important; top: 0 !important; bottom: 0 !important;
-  width: 4px !important;
-  background: linear-gradient(180deg, var(--gold), transparent) !important;
-  opacity: .75 !important;
-}
-.post-entry:hover { transform: translateY(-2px); }
-.entry-header h2 a, .entry-header h1 a { color: var(--ink) !important; }
-.entry-header h2 a:hover, .entry-header h1 a:hover { color: var(--gold-2) !important; }
-.post-meta, .entry-meta { color: var(--muted) !important; }
-.entry-content, .post-content, .entry-content p { color: var(--body-c) !important; }
-
-/* ---------- محتوای پست ---------- */
-.post-content img { border-radius: 12px; border: 1px solid var(--line); }
-.post-content blockquote {
-  border-inline-start: 3px solid var(--gold) !important;
-  background: var(--surface-2) !important;
-  padding: 14px 18px !important;
-  border-radius: 10px !important;
+.post-content th {
+  background: var(--surface-3) !important;
   color: var(--gold-2) !important;
+  padding: 14px 18px !important;
+  text-align: right !important;
+  font-weight: 600 !important;
 }
-.post-content table { background: var(--surface) !important; border: 1px solid var(--line) !important; }
-.post-content th { background: var(--surface-2) !important; color: var(--gold-2) !important; padding: 10px !important; }
-.post-content td { padding: 10px !important; border-top: 1px solid var(--line) !important; color: var(--body-c) !important; }
+.post-content td {
+  padding: 14px 18px !important;
+  border-top: 1px solid var(--line) !important;
+  color: var(--body) !important;
+}
 
-/* ---------- تگ‌ها ---------- */
-.post-tags a, .entry-tags a, .widget-tags a {
-  background: var(--surface-2) !important;
+/* === تگ‌ها === */
+.post-tags a, .terms-tags a {
+  display: inline-block !important;
+  background: var(--gold-soft) !important;
   color: var(--gold-2) !important;
   border: 1px solid var(--line) !important;
-  padding: 4px 12px !important;
+  padding: 6px 14px !important;
   border-radius: 99px !important;
-  font-size: .78rem !important;
-  display: inline-block;
-  margin: 0 0 6px 6px !important;
+  font-size: 0.82rem !important;
+  margin: 4px 4px 4px 0 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
 }
-.post-tags a:hover, .entry-tags a:hover, .widget-tags a:hover {
+.post-tags a:hover, .terms-tags a:hover {
   background: var(--gold) !important;
-  color: #241a08 !important;
+  color: #1c1509 !important;
+  transform: translateY(-2px);
 }
 
-/* ---------- صفحه‌بندی ---------- */
-.pagination a, .pagination .active {
+/* === صفحه‌بندی === */
+.pagination a, .pagination span {
   background: var(--surface) !important;
   border: 1px solid var(--line) !important;
   color: var(--gold-2) !important;
-  border-radius: 12px !important;
-}
-.pagination a:hover { border-color: var(--gold) !important; }
-
-/* ---------- ویجت‌های سایدبار (مشابه بلاگفا) ---------- */
-.widget {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 20px 22px;
-}
-.widget h6 {
-  font-family: "Lalezar", "Vazirmatn", Tahoma !important;
-  font-size: 1.05rem !important;
-  display: flex; align-items: center; gap: 8px;
-  padding: 10px 14px;
-  margin: -20px -22px 14px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-2));
-  color: #241a08 !important;
-  border-radius: var(--radius) var(--radius) 0 0;
-  border-bottom: 2px solid var(--gold-2);
-}
-.widget h6::before { content: "♪"; }
-.widget ul { list-style: none; margin: 0; padding: 0; }
-.widget li { border-bottom: 1px dashed rgba(61,48,28,.7); }
-.widget li:last-child { border-bottom: 0; }
-.widget li a {
-  display: block; padding: 9px 2px;
-  color: var(--ink) !important; text-decoration: none; font-size: .87rem;
-}
-.widget li a::before { content: "◈ "; color: var(--gold); font-size: .72rem; }
-.widget li a:hover { color: var(--gold-2) !important; padding-inline-start: 8px; }
-.widget p { font-size: .87rem; color: var(--body-c); }
-.widget-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-/* ---------- فوتر ---------- */
-.footer { background: var(--bg-2) !important; border-top: 1px solid var(--line) !important; }
-
-/* ---------- اسکرول‌بار و انتخاب ---------- */
-::selection { background: var(--gold) !important; color: #241a08 !important; }
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #4a3a22; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gold); }
-
-/* ---------- موبایل ---------- */
-@media (max-width: 920px) {
-  .delkash-layout { grid-template-columns: 1fr; }
-  .delkash-sidebar { position: static; }
-  body { background-attachment: scroll !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
-}/* ============================================
-   قالب «موسیقی دلکش» — نسخه ۲ (هماهنگ با بلاگفا)
-   ============================================ */
-
-/* ---------- پالت رنگی ---------- */
-:root {
-  --bg: #151009;
-  --bg-2: #1c1610;
-  --surface: #241c12;
-  --surface-2: #2d2314;
-  --line: #3d301c;
-  --gold: #e0aa4e;
-  --gold-2: #f3d28f;
-  --ink: #f6eddd;
-  --body-c: #e9dfcd;
-  --muted: #b6a486;
-  --radius: 16px;
-  --shadow: 0 12px 32px rgba(0,0,0,.38);
-}
-
-/* ---------- بازنویسی متغیرهای PaperMod ---------- */
-:root, .dark {
-  --theme: #151009 !important;
-  --entry: #241c12 !important;
-  --primary: #f6eddd !important;
-  --secondary: #b6a486 !important;
-  --tertiary: #6b5a3e !important;
-  --content: #e9dfcd !important;
-  --code-bg: #2d2314 !important;
-  --hljs-bg: #2d2314 !important;
-  --border: #3d301c !important;
-}
-
-/* ---------- بک‌گراند ثابت با عکس (اصلاح شده) ---------- */
-body {
-  background:
-    linear-gradient(180deg, rgba(21,16,9,.86), rgba(21,16,9,.93)),
-    url("https://i.imgur.com/y0wFdfC.jpeg") center / cover no-repeat fixed !important;
-}
-
-/* ---------- تایپوگرافی ---------- */
-body, button, input { font-family: "Vazirmatn", Tahoma, sans-serif !important; }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lalezar", "Vazirmatn", Tahoma, sans-serif !important;
-  color: var(--gold-2) !important;
-}
-a { color: var(--gold-2) !important; }
-a:hover { color: var(--gold) !important; }
-
-/* ---------- چیدمان دوستونه با سایدبار ---------- */
-.delkash-layout {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 28px;
-  align-items: start;
-}
-.delkash-layout .main {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 24px 0 !important;
-  min-height: auto !important;
-}
-.delkash-sidebar { position: sticky; top: 96px; display: grid; gap: 20px; }
-
-/* ---------- کارت خوش‌آمد (homeInfo) ---------- */
-.home-info, .first-entry.home-info {
-  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--radius) !important;
-  padding: 30px !important;
-  text-align: center !important;
-  box-shadow: var(--shadow) !important;
-  margin-bottom: 26px !important;
-}
-
-/* ---------- کارت‌های پست ---------- */
-.post-entry, .first-entry {
-  background: linear-gradient(180deg, var(--surface), var(--bg-2)) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--radius) !important;
-  padding: 24px 26px !important;
-  margin-bottom: 24px !important;
-  box-shadow: var(--shadow) !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-.post-entry::before {
-  content: "" !important;
-  position: absolute !important;
-  right: 0 !important; top: 0 !important; bottom: 0 !important;
-  width: 4px !important;
-  background: linear-gradient(180deg, var(--gold), transparent) !important;
-  opacity: .75 !important;
-}
-.post-entry:hover { transform: translateY(-2px); }
-.entry-header h2 a, .entry-header h1 a { color: var(--ink) !important; }
-.entry-header h2 a:hover, .entry-header h1 a:hover { color: var(--gold-2) !important; }
-.post-meta, .entry-meta { color: var(--muted) !important; }
-.entry-content, .post-content, .entry-content p { color: var(--body-c) !important; }
-
-/* ---------- محتوای پست ---------- */
-.post-content img { border-radius: 12px; border: 1px solid var(--line); }
-.post-content blockquote {
-  border-inline-start: 3px solid var(--gold) !important;
-  background: var(--surface-2) !important;
-  padding: 14px 18px !important;
-  border-radius: 10px !important;
-  color: var(--gold-2) !important;
-}
-.post-content table { background: var(--surface) !important; border: 1px solid var(--line) !important; }
-.post-content th { background: var(--surface-2) !important; color: var(--gold-2) !important; padding: 10px !important; }
-.post-content td { padding: 10px !important; border-top: 1px solid var(--line) !important; color: var(--body-c) !important; }
-
-/* ---------- تگ‌ها ---------- */
-.post-tags a, .entry-tags a, .widget-tags a {
-  background: var(--surface-2) !important;
-  color: var(--gold-2) !important;
-  border: 1px solid var(--line) !important;
-  padding: 4px 12px !important;
   border-radius: 99px !important;
-  font-size: .78rem !important;
-  display: inline-block;
-  margin: 0 0 6px 6px !important;
+  padding: 10px 22px !important;
+  text-decoration: none !important;
+  font-size: 0.88rem !important;
 }
-.post-tags a:hover, .entry-tags a:hover, .widget-tags a:hover {
+.pagination a:hover {
   background: var(--gold) !important;
-  color: #241a08 !important;
+  color: #1c1509 !important;
+  border-color: var(--gold) !important;
 }
 
-/* ---------- صفحه‌بندی ---------- */
-.pagination a, .pagination .active {
+/* === سایدبار مدرن === */
+.widget {
   background: var(--surface) !important;
   border: 1px solid var(--line) !important;
+  border-radius: var(--radius) !important;
+  padding: 24px !important;
+  margin-bottom: 20px !important;
+  transition: border-color 0.3s ease;
+}
+.widget:hover {
+  border-color: rgba(212, 162, 74, 0.3);
+}
+.widget h6, .widget h3 {
+  font-family: "Lalezar", "Vazirmatn", sans-serif !important;
+  font-size: 1rem !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 14px 0 !important;
+  margin: 0 0 14px 0 !important;
+  background: none !important;
   color: var(--gold-2) !important;
-  border-radius: 12px !important;
+  border-bottom: 1px dashed var(--line) !important;
+  border-radius: 0 !important;
 }
-.pagination a:hover { border-color: var(--gold) !important; }
-
-/* ---------- ویجت‌های سایدبار (مشابه بلاگفا) ---------- */
-.widget {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 20px 22px;
+.widget h6::before, .widget h3::before {
+  content: "♪";
+  color: var(--gold);
+  opacity: 0.7;
+  font-size: 1.1rem;
 }
-.widget h6 {
-  font-family: "Lalezar", "Vazirmatn", Tahoma !important;
-  font-size: 1.05rem !important;
-  display: flex; align-items: center; gap: 8px;
-  padding: 10px 14px;
-  margin: -20px -22px 14px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-2));
-  color: #241a08 !important;
-  border-radius: var(--radius) var(--radius) 0 0;
-  border-bottom: 2px solid var(--gold-2);
-}
-.widget h6::before { content: "♪"; }
 .widget ul { list-style: none; margin: 0; padding: 0; }
-.widget li { border-bottom: 1px dashed rgba(61,48,28,.7); }
-.widget li:last-child { border-bottom: 0; }
-.widget li a {
-  display: block; padding: 9px 2px;
-  color: var(--ink) !important; text-decoration: none; font-size: .87rem;
+.widget li {
+  border-bottom: 1px solid rgba(61, 48, 28, 0.3);
 }
-.widget li a::before { content: "◈ "; color: var(--gold); font-size: .72rem; }
-.widget li a:hover { color: var(--gold-2) !important; padding-inline-start: 8px; }
-.widget p { font-size: .87rem; color: var(--body-c); }
-.widget-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.widget li:last-child { border-bottom: none; }
+.widget li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  color: var(--body) !important;
+  text-decoration: none !important;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+}
+.widget li a::before { display: none !important; }
+.widget li a:hover {
+  color: var(--gold-2) !important;
+  padding-inline-start: 10px;
+}
+.widget p { font-size: 0.9rem; color: var(--body); line-height: 1.8; }
 
-/* ---------- فوتر ---------- */
-.footer { background: var(--bg-2) !important; border-top: 1px solid var(--line) !important; }
-
-/* ---------- اسکرول‌بار و انتخاب ---------- */
-::selection { background: var(--gold) !important; color: #241a08 !important; }
-::-webkit-scrollbar { width: 10px; }
+/* === Scrollbar ظریف === */
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #4a3a22; border-radius: 8px; }
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 4px;
+}
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-/* ---------- موبایل ---------- */
+/* === موبایل === */
 @media (max-width: 920px) {
-  .delkash-layout { grid-template-columns: 1fr; }
-  .delkash-sidebar { position: static; }
-  body { background-attachment: scroll !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  .post-hero { aspect-ratio: 4 / 3; }
+  .post-hero-content { padding: 20px; }
+  .post-hero-content h1 { font-size: 1.5rem !important; }
+  .post-entry .entry-header,
+  .post-entry .entry-content { padding: 16px 18px !important; }
 }
