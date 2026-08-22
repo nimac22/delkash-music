@@ -130,7 +130,7 @@
       <a class="dk-card" href="{{ .Permalink }}">
         {{- with .Params.cover }}
           {{- with .image }}
-          <div class="dk-card-media"><img src="{{ . }}" alt="" loading="lazy"></div>
+         <div class="dk-card-media"><img src="{{ . }}" alt="کاور تصنیف {{ $.Title }}" loading="lazy"></div>
           {{- end }}
         {{- else }}
           <div class="dk-card-media dk-card-ph">♪</div>
