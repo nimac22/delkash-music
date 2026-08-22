@@ -369,3 +369,14 @@ body::before { display: none !important; }
   .post-entry .entry-header,
   .post-entry .entry-content { padding: 16px 18px !important; }
 }
+/* ============================================
+   دسترس‌پذیری: نشانه بصری تمرکز
+   ============================================ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.dk-search:focus-within {
+  outline: 2px solid var(--dk-gold-2) !important;
+  outline-offset: 3px !important;
+  border-radius: 6px;
+}
