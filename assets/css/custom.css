@@ -189,10 +189,14 @@ body::before { display: none !important; }
 
 /* متن شعر: بزرگ، خوانا، وسط‌چین */
 .post-content p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.4rem;
   color: var(--body);
+  line-height: 2.2;
 }
-
+.post-content p + p {
+  border-top: 1px dashed rgba(212, 162, 74, 0.15);
+  padding-top: 1.2rem;
+}
 /* عکس داخل متن: کوچک و با گوشه‌های گرد */
 .post-content img {
   max-width: 280px !important;
