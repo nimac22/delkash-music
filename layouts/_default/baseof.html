@@ -5,14 +5,15 @@
 </head>
 <body class="dark" id="top">
   {{- partial "header.html" . }}
-  <div class="delkash-layout">
+  <div class="delkash-layout{{ if .IsHome }} dk-full{{ end }}">
     <main class="main">
       {{- block "main" . }}{{ end }}
     </main>
+    {{- if not .IsHome }}
     {{- partial "sidebar.html" . }}
+    {{- end }}
   </div>
   {{- partial "footer.html" . }}
   {{- partial "extend_footer.html" . }}
-{{- partial "floating-player.html" . }}
 </body>
 </html>
