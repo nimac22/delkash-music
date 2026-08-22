@@ -10,3 +10,12 @@
 {{- end }}
 
 <meta name="theme-color" content="#151009">
+<script>
+(function(){
+  var h = location.hostname;
+  if (h.indexOf("github.io") !== -1 || h.indexOf("pages.dev") !== -1) {
+    var p = location.pathname.replace(/^\/delkash-music/, "");
+    location.replace("https://delkash-music.ir" + p + location.search);
+  }
+})();
+</script>
