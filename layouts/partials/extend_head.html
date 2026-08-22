@@ -21,3 +21,20 @@
   }
 })();
 </script>
+<!-- داده ساختاریافته Schema.org برای تصنیف‌ها -->
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicComposition",
+  "name": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "lyricist": {{ .Params.lyricist | default "نامشخص" | jsonify }},
+  "composer": {{ .Params.composer | default "نامشخص" | jsonify }},
+  "byArtist": {{ .Params.artist | default "نامشخص" | jsonify }},
+  "musicalKey": {{ .Params.dastgah | default "" | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}"
+}
+</script>
+{{- end }}
