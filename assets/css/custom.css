@@ -443,3 +443,38 @@ input:focus-visible,
     font-size: 2.5rem;
   }
 }
+/* ============================================
+   پچ v3 — اصلاح چیدمان، هیرو، جدول، پلیر
+   ============================================ */
+
+/* ۱) چیدمان دوستونه: محتوا + سایدبار ۳۰۰ پیکسلی */
+.delkash-layout{
+  max-width:1150px;margin:0 auto;padding:0 20px;
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  gap:28px;align-items:start;
+}
+.delkash-layout .main{max-width:100%!important;margin:0!important;padding:24px 0!important;min-height:auto!important;}
+.delkash-sidebar{position:sticky;top:96px;display:grid;gap:20px;}
+@media (max-width:920px){
+  .delkash-layout{grid-template-columns:1fr;}
+  .delkash-sidebar{position:static;}
+}
+
+/* ۲) عکس هیرو تمام‌قد (لغو محدودیت ۲۸۰ پیکسل) */
+.post-content .post-hero img{
+  max-width:100%!important;width:100%!important;height:100%!important;
+  margin:0!important;border:none!important;border-radius:0!important;box-shadow:none!important;
+}
+
+/* ۳) حذف سلول‌های خالی جدول */
+.post-content td:empty,.post-content th:empty{display:none;}
+.post-content table{width:100%;}
+
+/* ۴) پلیر صوتی تیره هماهنگ با قالب */
+.post-content audio{
+  filter:invert(.92) hue-rotate(180deg);
+  border-radius:12px;
+}
+
+/* ۵) هدر ماتتر برای خوانایی بهتر */
+header,.site-header{background:rgba(15,10,6,.94)!important;}
