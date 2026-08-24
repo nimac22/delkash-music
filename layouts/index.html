@@ -129,7 +129,7 @@
       <a class="dk-more" href="{{ "posts" | relLangURL }}">مشاهده همه ←</a>
     </div>
     <div class="dk-grid">
-      {{- range first 6 site.RegularPages }}
+      {{- range first 6 (where site.RegularPages "Section" "posts") }}
       <a class="dk-card" href="{{ .Permalink }}">
         {{- with .Params.cover }}
           {{- with .image }}
