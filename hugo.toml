@@ -77,3 +77,4 @@ theme = "PaperMod"
 # تنظیمات Markdown
 [markup.goldmark.renderer]
   unsafe = true
+  hardWraps = true
