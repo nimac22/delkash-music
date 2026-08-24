@@ -31,15 +31,13 @@ cover:
 | 🎵 آهنگ و ترانه | جهانبخش پازوکی |
 | 🎼 دستگاه | آواز دشتی |
 | 📅 سال ضبط | ۱۳۵۶ |
-
 ## پخش و دانلود
 
 <audio controls preload="none">
-  <source src="https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3" type="audio/mpeg">
+  <source src="https://archive.org/download/khodahafez-hayede.mp3/khodahafez-hayede.mp3" type="audio/mpeg">
 </audio>
 
-<a class="dl-btn" href="https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3">⬇ دانلود آهنگ خداحافظ (۳۲۰)</a>
-
+<a class="dl-btn" href="https://archive.org/download/khodahafez-hayede.mp3/khodahafez-hayede.mp3">⬇ دانلود آهنگ خداحافظ (۳۲۰)</a>
 ## متن آهنگ خداحافظ
 
 خوردم قسم تا بعد از این
