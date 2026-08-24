@@ -34,14 +34,15 @@ cover:
 | 🎶 بازخوانی | جهان |
 
 ## پخش و دانلود
+## پخش و دانلود
 
 <audio controls preload="none">
-  <source src="https://s16.picofile.com/file/8411332153/Migoryzam_Marzieh.mp3" type="audio/mpeg">
+  <source src="https://archive.org/download/do-se-shab-marzieh/do-se-shab-marzieh.mp3" type="audio/mpeg">
 </audio>
 
-<a class="dl-btn" href="https://s16.picofile.com/file/8411332153/Migoryzam_Marzieh.mp3">⬇ دانلود اجرای مرضیه (۳۲۰)</a>
+<a class="dl-btn" href="https://archive.org/download/do-se-shab-marzieh/do-se-shab-marzieh.mp3">⬇ دانلود اجرای مرضیه (۳۲)</a>
 
-<a class="dl-btn" href="s17.picofile.com/file/8411322968/KhodaKoneKeKhabamNabare_Jahan_.mp3.html" style="margin-top:10px">⬇ دانلود اجرای جهان (بازخوانی)</a>
+<a class="dl-btn" href="https://archive.org/download/do-se-shab-marzieh/do-se-shab-jahan.mp3" style="margin-top:10px">⬇ دانلود اجرای جهان (بازخوانی)</a>
 
 ## متن آهنگ دو سه شبه که چشمام به دره
 
