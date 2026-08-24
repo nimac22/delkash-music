@@ -1,14 +1,27 @@
 ---
-title: "متن آهنگ می‌گریزم مرضیه | آواز دشتی + دانلود"
+title: "متن آهنگ می‌گریزم – مرضیه | دانلود با کیفیت ۳۲۰"
 date: 2020-05-27
-description: "متن کامل تصنیف می‌گریزم با صدای مرضیه، آهنگ از حبیب‌الله بدیعی و ترانه از رحیم معینی کرمانشاهی در آواز دشتی + دانلود و پخش آنلاین"
-tags: ["مرضیه", "حبیب الله بدیعی", "رحیم معینی کرمانشاهی", "همایون کاظمی", "تصنیف", "دانلود آهنگ"]
+description: "متن کامل و دانلود تصنیف می‌گریزم با صدای مرضیه در آواز دشتی، آهنگ از حبیب‌الله بدیعی و ترانه از رحیم معینی کرمانشاهی + بازخوانی همایون کاظمی"
+tags: ["مرضیه", "حبیب الله بدیعی", "رحیم معینی کرمانشاهی", "همایون کاظمی", "دهه ۵۰", "می‌گریزم"]
 categories: ["آواز دشتی"]
 artist: "مرضیه"
 composer: "حبیب الله بدیعی"
 lyricist: "رحیم معینی کرمانشاهی"
 dastgah: "آواز دشتی"
+cover:
+  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787261493/mrz3.png"
+  hidden: true
 ---
+
+<div class="post-hero">
+  <img src="https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787261493/mrz3.png" alt="متن آهنگ می‌گریزم مرضیه">
+  <div class="post-hero-content">
+    <div class="hero-meta">
+      <span>🎤 مرضیه</span>
+    </div>
+    <h1>می‌گریزم</h1>
+  </div>
+</div>
 
 ## مشخصات اثر
 
@@ -20,7 +33,17 @@ dastgah: "آواز دشتی"
 | 🎼 دستگاه | آواز دشتی |
 | 🎶 بازخوانی | همایون کاظمی |
 
-## متن تصنیف می‌گریزم
+## پخش و دانلود
+
+<audio controls preload="none">
+  <source src="LINK_MP3_MARZIEH" type="audio/mpeg">
+</audio>
+
+<a class="dl-btn" href="s16.picofile.com/file/8411333734/Migorizam_Marzieh_mp3.mp3.html">⬇ دانلود اجرای مرضیه (۳۲۰)</a>
+
+<a class="dl-btn" href="s16.picofile.com/file/8411334150/Migorizam_HomayounKazemi_.mp3.html" style="margin-top:10px">⬇ دانلود اجرای همایون کاظمی (بازخوانی)</a>
+
+## متن آهنگ می‌گریزم
 
 می‌گریزم، می‌گریزم
 اشک حسرت، از چه ریزم
@@ -63,24 +86,7 @@ dastgah: "آواز دشتی"
 
 > 🎵 **نکته:** آواز دشتی از صمیمی‌ترین آوازهای موسیقی ایرانی است و در آن احساسات عاشقانه و غم‌انگیز با ظرافت خاصی بیان می‌شود.
 
-## پخش آنلاین
-
-### نسخه اصلی — مرضیه
-<audio controls preload="none">
-  <source src="https://s16.picofile.com/file/8411332153/Migoryzam_Marzieh.mp3" type="audio/mpeg">
-</audio>
-
-### بازخوانی — همایون کاظمی
-<audio controls preload="none">
-  <source src="https://s16.picofile.com/file/8411332160/Migoryzam_Homayoun.mp3" type="audio/mpeg">
-</audio>
-
-## دانلود
-
-- 📥 [دانلود با صدای مرضیه](https://s16.picofile.com/file/8411332153/Migoryzam_Marzieh.mp3)
-- 📥 [دانلود با صدای همایون کاظمی](https://s16.picofile.com/file/8411332160/Migoryzam_Homayoun.mp3)
-
 ## تصنیف‌های مرتبط
 
-- [متن آهنگ خداحافظ هایده](/posts/khodahafez-hayede/)
-- [متن آهنگ دو سه شبه که چشمام به دره مرضیه](/posts/do-se-shab-marzieh/)
+- [خداحافظ — هایده](/posts/khodahafez-hayede/)
+- [دو سه شبه — مرضیه](/posts/do-se-shab-marzieh/)
