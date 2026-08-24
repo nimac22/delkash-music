@@ -478,3 +478,26 @@ input:focus-visible,
 
 /* ۵) هدر ماتتر برای خوانایی بهتر */
 header,.site-header{background:rgba(15,10,6,.94)!important;}
+/* دکمه دانلود برجسته (CTA) */
+.dl-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--gold-2),var(--gold));
+  color:#1c1509;font-weight:700;padding:14px 20px;border-radius:12px;
+  text-decoration:none!important;margin:20px 0;
+  box-shadow:0 4px 14px rgba(212,162,74,.3);
+}
+.dl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(212,162,74,.5);}
+
+/* رفرین (تکرار) به‌صورت بلاک متمایز */
+blockquote.refrain{
+  border-inline-start:3px solid var(--gold);
+  background:var(--surface-2);
+  padding:14px 20px;
+  border-radius:12px;
+  margin:20px auto;
+  max-width:340px;
+  text-align:center;
+  color:var(--gold-2);
+  font-weight:700;
+  font-style:normal;
+}
