@@ -40,7 +40,7 @@ cover:
   <source src="https://archive.org/download/do-se-shab-marzieh/do-se-shab-marzieh.mp3" type="audio/mpeg">
 </audio>
 
-<a class="dl-btn" href="https://archive.org/download/do-se-shab-marzieh/do-se-shab-marzieh.mp3">⬇ دانلود اجرای مرضیه (۳۲)</a>
+<a class="dl-btn" href="https://archive.org/download/do-se-shab-marzieh/do-se-shab-marzieh.mp3">⬇ دانلود اجرای مرضیه (320)</a>
 
 <a class="dl-btn" href="https://archive.org/download/do-se-shab-marzieh/do-se-shab-jahan.mp3" style="margin-top:10px">⬇ دانلود اجرای جهان (بازخوانی)</a>
 
