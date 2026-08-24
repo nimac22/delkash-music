@@ -1,8 +1,8 @@
 ---
-title: "خداحافظ هایده"
+title: "متن آهنگ خداحافظ – هایده | دانلود با کیفیت ۳۲۰"
 date: 2020-05-27
-description: "متن کامل تصنیف خداحافظ با صدای هایده در آواز دشتی، اثر جهانبخش پازوکی"
-tags: ["هایده", "جهانبخش پازوکی", "تصنیف", "دانلود آهنگ"]
+description: "متن کامل و دانلود تصنیف خداحافظ با صدای هایده در آواز دشتی، اثر جهانبخش پازوکی"
+tags: ["هایده", "جهانبخش پازوکی"]
 categories: ["آواز دشتی"]
 artist: "هایده"
 composer: "جهانبخش پازوکی"
@@ -14,12 +14,10 @@ cover:
 ---
 
 <div class="post-hero">
-  <img src="https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg" alt="هایده">
+  <img src="https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg" alt="متن آهنگ خداحافظ هایده">
   <div class="post-hero-content">
     <div class="hero-meta">
       <span>🎤 هایده</span>
-      <span>🎼 آواز دشتی</span>
-      <span>📅 ۱۳۵۶</span>
     </div>
     <h1>خداحافظ</h1>
   </div>
@@ -34,25 +32,27 @@ cover:
 | 🎼 دستگاه | آواز دشتی |
 | 📅 سال ضبط | ۱۳۵۶ |
 
-## پخش آنلاین
+## پخش و دانلود
 
 <audio controls preload="none">
   <source src="https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3" type="audio/mpeg">
 </audio>
 
-## متن تصنیف
+<a class="dl-btn" href="https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3">⬇ دانلود آهنگ خداحافظ (۳۲۰)</a>
+
+## متن آهنگ خداحافظ
 
 خوردم قسم تا بعد از این
 با چشم باز عاشق شوم
 حالا که آمد دیگری
 من می‌روم، من می‌روم
 
-**خداحافظ، خداحافظ**
+<blockquote class="refrain">خداحافظ، خداحافظ</blockquote>
 
 حالا که دست دیگری برهم زده دنیای ما
 حالا که برهم می‌خورد آرامش فردای ما
 
-**خداحافظ، خداحافظ**
+<blockquote class="refrain">خداحافظ، خداحافظ</blockquote>
 
 ای تکیه‌گاه ناتوان، از ناامیدی خسته‌ام
 از بیم فرداهای دور، بار سفر را بسته‌ام
@@ -62,15 +62,11 @@ cover:
 حالا که پشت پا زدن برای تو آسان شده
 حالا که لحظه‌های تو از آن این و آن شده
 
-**خداحافظ، خداحافظ**
+<blockquote class="refrain">خداحافظ، خداحافظ</blockquote>
 
 ## درباره این تصنیف
 
 تصنیف «خداحافظ» یکی از ماندگارترین آثار هایده در آواز دشتی است که آهنگ و ترانه آن را جهانبخش پازوکی سروده است. این اثر با صدای مخملی هایده، به یکی از خاطره‌انگیزترین خداحافظی‌های موسیقی ایرانی تبدیل شده است.
-
-## دانلود
-
-📥 [دانلود آهنگ خداحافظ هایده (کیفیت ۳۲۰)](https://s16.picofile.com/file/8411332142/KhordamGhasam_Hayedeh_.mp3)
 
 ## تصنیف‌های مرتبط
 
