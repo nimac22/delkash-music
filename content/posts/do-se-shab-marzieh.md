@@ -34,7 +34,7 @@ cover:
 | 🎶 بازخوانی | جهان |
 
 ## پخش و دانلود
-## پخش و دانلود
+
 
 <audio controls preload="none">
   <source src="https://archive.org/download/do-se-shab-marzieh/do-se-shab-marzieh.mp3" type="audio/mpeg">
