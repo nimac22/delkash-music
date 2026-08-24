@@ -1,7 +1,8 @@
 ---
-title: "متن آهنگ می‌گریزم – مرضیه | دانلود با کیفیت ۳۲۰"
-date: 2020-05-27
+title: "متن آهنگ می‌گریزم – مرضیه | دانلود با کیفیت ۳۲"
+date: 2026-08-14
 description: "متن کامل و دانلود تصنیف می‌گریزم با صدای مرضیه در آواز دشتی، آهنگ از حبیب‌الله بدیعی و ترانه از رحیم معینی کرمانشاهی + بازخوانی همایون کاظمی"
+audio: "https://archive.org/download/migoryzam-homayoun-kazemi/migoryzam-marzieh.mp3"
 tags: ["مرضیه", "حبیب الله بدیعی", "رحیم معینی کرمانشاهی", "همایون کاظمی", "دهه ۵۰", "می‌گریزم"]
 categories: ["آواز دشتی"]
 artist: "مرضیه"
@@ -36,12 +37,12 @@ cover:
 ## پخش و دانلود
 
 <audio controls preload="none">
-  <source src="LINK_MP3_MARZIEH" type="audio/mpeg">
+  <source src="https://archive.org/download/migoryzam-homayoun-kazemi/migoryzam-marzieh.mp3" type="audio/mpeg">
 </audio>
 
-<a class="dl-btn" href="s16.picofile.com/file/8411333734/Migorizam_Marzieh_mp3.mp3.html">⬇ دانلود اجرای مرضیه (۳۲۰)</a>
+<a class="dl-btn" href="https://archive.org/download/migoryzam-homayoun-kazemi/migoryzam-marzieh.mp3">⬇ دانلود اجرای مرضیه (۳۲)</a>
 
-<a class="dl-btn" href="s16.picofile.com/file/8411334150/Migorizam_HomayounKazemi_.mp3.html" style="margin-top:10px">⬇ دانلود اجرای همایون کاظمی (بازخوانی)</a>
+<a class="dl-btn" href="https://archive.org/download/migoryzam-homayoun-kazemi/migoryzam-homayoun-kazemi.mp3" style="margin-top:10px">⬇ دانلود اجرای همایون کاظمی (بازخوانی)</a>
 
 ## متن آهنگ می‌گریزم
 
@@ -74,19 +75,9 @@ cover:
 
 به حال خود بگذارم
 به دست غم بسپارم
-
 که بی‌تو تنها بروم
 برو برو تا بروم
 
 ## درباره این تصنیف
 
-«می‌گریزم» یکی از ماندگارترین تصنیف‌های **آواز دشتی** است که با صدای جادویی **مرضیه** جاودانه شد. آهنگسازی این اثر را استاد **حبیب‌الله بدیعی** و سرایش شعر را **رحیم معینی کرمانشاهی** بر عهده داشته‌اند.
-
-این تصنیف در سال‌های بعد توسط هنرمندان متعددی بازخوانی شده است، از جمله **همایون کاظمی** که اجرایی متفاوت از آن ارائه داده است.
-
-> 🎵 **نکته:** آواز دشتی از صمیمی‌ترین آوازهای موسیقی ایرانی است و در آن احساسات عاشقانه و غم‌انگیز با ظرافت خاصی بیان می‌شود.
-
-## تصنیف‌های مرتبط
-
-- [خداحافظ — هایده](/posts/khodahafez-hayede/)
-- [دو سه شبه — مرضیه](/posts/do-se-shab-marzieh/)
+«می‌گریزم» یکی از ماند
