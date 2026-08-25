@@ -10,7 +10,7 @@ composer: "حبیب الله بدیعی"
 lyricist: "رحیم معینی کرمانشاهی"
 dastgah: "آواز دشتی"
 cover:
-  images: ["https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787261493/mrz3.png"]
+  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787261493/mrz3.png"
   hidden: true
 ---
 
