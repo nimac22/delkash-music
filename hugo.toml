@@ -16,6 +16,8 @@ theme = "PaperMod"
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
   author = "تیم موسیقی دلکش"
   defaultTheme = "dark"
+  [params.header]
+  label = "موسیقی دلکش"
   
   # فعال‌سازی ویژگی‌های PaperMod
   ShowReadingTime = true
