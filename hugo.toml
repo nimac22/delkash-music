@@ -78,3 +78,7 @@ theme = "PaperMod"
 [markup.goldmark.renderer]
   unsafe = true
   hardWraps = true
+  title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی، پخش و دانلود"
+
+[params]
+  brand = "موسیقی دلکش"
