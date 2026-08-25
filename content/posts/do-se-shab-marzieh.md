@@ -9,7 +9,7 @@ composer: "بزرگ لشگری"
 lyricist: "ایرج جنتی عطایی"
 dastgah: "آواز دشتی"
 cover:
-  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787579233/Marzieh4.jpg"
+  images: ["https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787579233/Marzieh4.jpg"]
   hidden: true
 ---
 
