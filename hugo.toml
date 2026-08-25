@@ -1,7 +1,7 @@
 baseURL = "https://delkash-music.ir/"
 languageCode = "fa-ir"
 defaultContentLanguage = "fa"
-title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی"
+title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی، پخش و دانلود"
 theme = "PaperMod"
 
 # زبان و جهت
@@ -18,6 +18,7 @@ theme = "PaperMod"
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
   author = "تیم موسیقی دلکش"
   defaultTheme = "dark"
+  images = ["images/background.jpg"]
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
@@ -36,6 +37,7 @@ theme = "PaperMod"
   Title = "🎵 به موسیقی دلکش خوش آمدید"
   Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی — با بیش از ۵۰۰ تصنیف ماندگار از اساتید بزرگ"
 
+# شبکه‌های اجتماعی
 [[params.socialIcons]]
   name = "telegram"
   url = "https://t.me/delkash_music"
