@@ -20,7 +20,7 @@ cover:
     <div class="hero-meta">
       <span>🎤 هایده</span>
     </div>
-    <h1>خداحافظ</h1>
+   <div class="hero-title">خداحافظ</div>
   </div>
 </div>
 
