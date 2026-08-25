@@ -2,7 +2,7 @@
 title: "متن آهنگ خداحافظ – هایده | دانلود با کیفیت ۳۲۰"
 date: 2026-08-10
 description: "متن کامل و دانلود تصنیف خداحافظ با صدای هایده در آواز دشتی، اثر جهانبخش پازوکی"
-audio: "https://archive.org/download/khodahafez-hayede.mp3/khodahafez-hayede.mp3"
+audio: "https://archive.org/download/khodahafez-hayede/khodahafez-hayede.mp3"
 tags: ["هایده", "جهانبخش پازوکی", "دهه ۵۰", "خداحافظ"]
 categories: ["آواز دشتی"]
 artist: "هایده"
@@ -10,8 +10,9 @@ composer: "جهانبخش پازوکی"
 lyricist: "جهانبخش پازوکی"
 dastgah: "آواز دشتی"
 cover:
-  images: ["https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg"]
+  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg"
   hidden: true
+
 ---
 
 <div class="post-hero">
@@ -36,10 +37,10 @@ cover:
 ## پخش و دانلود
 
 <audio controls preload="none">
-  <source src="https://archive.org/download/khodahafez-hayede.mp3/khodahafez-hayede.mp3" type="audio/mpeg">
+  <source src="https://archive.org/download/khodahafez-hayede/khodahafez-hayede.mp3" type="audio/mpeg">
 </audio>
 
-<a class="dl-btn" href="https://archive.org/download/khodahafez-hayede.mp3/khodahafez-hayede.mp3">⬇ دانلود آهنگ خداحافظ (۳۲۰)</a>
+<a class="dl-btn" href="https://archive.org/download/khodahafez-hayede/khodahafez-hayede.mp3">⬇ دانلود آهنگ خداحافظ (۳۲۰)</a>
 
 ## متن آهنگ خداحافظ
 
