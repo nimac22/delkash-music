@@ -1,9 +1,10 @@
 baseURL = "https://delkash-music.ir/"
 languageCode = "fa-ir"
 defaultContentLanguage = "fa"
-title = "موسیقی دلکش | متن تصنیف‌ها و آوازهای موسیقی ایرانی"
+title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی"
 theme = "PaperMod"
 
+# زبان و جهت
 [languages.fa]
   languageName = "فارسی"
   languageDirection = "rtl"
@@ -12,14 +13,11 @@ theme = "PaperMod"
 [pagination]
   pagerSize = 10
 
+# تنظیمات عمومی قالب
 [params]
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
   author = "تیم موسیقی دلکش"
   defaultTheme = "dark"
-  [params.header]
-  label = "موسیقی دلکش"
-  
-  # فعال‌سازی ویژگی‌های PaperMod
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
@@ -28,19 +26,23 @@ theme = "PaperMod"
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
   disableSpecial1stPost = false
-  
-  # اطلاعات صفحه اصلی
-  [params.homeInfoParams]
-    Title = "🎵 به موسیقی دلکش خوش آمدید"
-    Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی — با بیش از ۵۰۰ تصنیف ماندگار از اساتید بزرگ"
-  
-  # شبکه‌های اجتماعی (بعداً تکمیل می‌کنیم)
-  [[params.socialIcons]]
-    name = "telegram"
-    url = "https://t.me/delkash_music"
-  [[params.socialIcons]]
-    name = "rss"
-    url = "index.xml"
+
+# برند کوتاه هدر
+[params.header]
+  label = "موسیقی دلکش"
+
+# اطلاعات صفحه اصلی
+[params.homeInfoParams]
+  Title = "🎵 به موسیقی دلکش خوش آمدید"
+  Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی — با بیش از ۵۰۰ تصنیف ماندگار از اساتید بزرگ"
+
+[[params.socialIcons]]
+  name = "telegram"
+  url = "https://t.me/delkash_music"
+
+[[params.socialIcons]]
+  name = "rss"
+  url = "index.xml"
 
 # منوی اصلی
 [[menu.main]]
@@ -48,27 +50,30 @@ theme = "PaperMod"
   name = "صفحه نخست"
   url = "/"
   weight = 1
+
 [[menu.main]]
   identifier = "posts"
   name = "همه تصنیف‌ها"
   url = "/posts/"
   weight = 2
+
 [[menu.main]]
   identifier = "tags"
   name = "دستگاه‌های موسیقی"
   url = "/tags/"
   weight = 3
+
 [[menu.main]]
   identifier = "about"
   name = "درباره ما"
   url = "/about/"
   weight = 4
 
-# اضافه کردن CSS سفارشی
+# CSS سفارشی
 [params.assets]
   customCSS = ["css/custom.css"]
 
-# Sitemap و RSS (حیاتی برای سئو)
+# Sitemap و RSS
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
@@ -80,7 +85,3 @@ theme = "PaperMod"
 [markup.goldmark.renderer]
   unsafe = true
   hardWraps = true
-  title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی، پخش و دانلود"
-
-[params]
-  brand = "موسیقی دلکش"
