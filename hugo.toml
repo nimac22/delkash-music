@@ -1,7 +1,7 @@
 baseURL = "https://delkash-music.ir/"
 languageCode = "fa-ir"
 defaultContentLanguage = "fa"
-title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی"
+title = "موسیقی دلکش | مرجع متن آهنگ و تصنیف ایرانی"
 theme = "PaperMod"
 
 [languages.fa]
@@ -13,7 +13,7 @@ theme = "PaperMod"
   pagerSize = 10
 
 [params]
-  description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
+  description = "مرجع متن آهنگ و تصنیف‌های ماندگار موسیقی ایرانی — پخش آنلاین و دانلود با کیفیت بالا"
   author = "تیم موسیقی دلکش"
   defaultTheme = "dark"
   images = ["images/background.jpg"]
@@ -31,7 +31,7 @@ theme = "PaperMod"
 
 [params.homeInfoParams]
   Title = "🎵 به موسیقی دلکش خوش آمدید"
-  Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی — با بیش از ۵۰۰ تصنیف ماندگار از اساتید بزرگ"
+  Content = "مرجع متن آهنگ و تصنیف‌های ماندگار موسیقی ایرانی — با دسته‌بندی دستگاه‌ها و پخش آنلاین"
 
 [[params.socialIcons]]
   name = "telegram"
@@ -49,7 +49,7 @@ theme = "PaperMod"
 
 [[menu.main]]
   identifier = "posts"
-  name = "همه تصنیف‌ها"
+  name = "همه آهنگ‌ها"
   url = "/posts/"
   weight = 2
 
