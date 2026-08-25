@@ -1,7 +1,7 @@
 baseURL = "https://delkash-music.ir/"
 languageCode = "fa-ir"
 defaultContentLanguage = "fa"
-title = "موسیقی دلکش"
+title = "موسیقی دلکش | متن تصنیف‌ها,آوازهای موسیقی ایرانی"
 theme = "PaperMod"
 
 [languages.fa]
