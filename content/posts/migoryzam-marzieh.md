@@ -20,7 +20,7 @@ cover:
     <div class="hero-meta">
       <span>🎤 مرضیه</span>
     </div>
-    <h1>می‌گریزم</h1>
+    <div class="hero-title">می گریزم</div>
   </div>
 </div>
 
