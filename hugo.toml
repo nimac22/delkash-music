@@ -1,10 +1,9 @@
 baseURL = "https://delkash-music.ir/"
 languageCode = "fa-ir"
 defaultContentLanguage = "fa"
-title = "موسیقی دلکش | متن تصنیف‌ها  موسیقی ایرانی، پخش و دانلود"
+title = "موسیقی دلکش | متن تصنیف‌های موسیقی ایرانی"
 theme = "PaperMod"
 
-# زبان و جهت
 [languages.fa]
   languageName = "فارسی"
   languageDirection = "rtl"
@@ -13,7 +12,6 @@ theme = "PaperMod"
 [pagination]
   pagerSize = 10
 
-# تنظیمات عمومی قالب
 [params]
   description = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی"
   author = "تیم موسیقی دلکش"
@@ -28,16 +26,13 @@ theme = "PaperMod"
   UseHugoToc = true
   disableSpecial1stPost = false
 
-# برند کوتاه هدر
 [params.header]
   label = "موسیقی دلکش"
 
-# اطلاعات صفحه اصلی
 [params.homeInfoParams]
   Title = "🎵 به موسیقی دلکش خوش آمدید"
   Content = "مرجع متن تصنیف‌ها و آوازهای موسیقی ایرانی — با بیش از ۵۰۰ تصنیف ماندگار از اساتید بزرگ"
 
-# شبکه‌های اجتماعی
 [[params.socialIcons]]
   name = "telegram"
   url = "https://t.me/delkash_music"
@@ -46,7 +41,6 @@ theme = "PaperMod"
   name = "rss"
   url = "index.xml"
 
-# منوی اصلی
 [[menu.main]]
   identifier = "home"
   name = "صفحه نخست"
@@ -71,11 +65,9 @@ theme = "PaperMod"
   url = "/about/"
   weight = 4
 
-# CSS سفارشی
 [params.assets]
   customCSS = ["css/custom.css"]
 
-# Sitemap و RSS
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
@@ -83,7 +75,6 @@ theme = "PaperMod"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-# تنظیمات Markdown
 [markup.goldmark.renderer]
   unsafe = true
   hardWraps = true
