@@ -1,38 +1,25 @@
-{{- /* Override امن OpenGraph برای دلکش */ -}}
-{{- $title := .Title | default .Site.Title -}}
-{{- $description := .Description | default .Site.Params.description -}}
-
-<meta property="og:title" content="{{ $title }}" />
-<meta property="og:description" content="{{ $description }}" />
+<meta property="og:title" content="{{ .Title | default .Site.Title }}" />
+<meta property="og:description" content="{{ .Description | default .Site.Params.description }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 
-{{- /* جمع‌آوری تصاویر — همیشه آرایه، هرگز رشته خام */ -}}
-{{- $images := slice -}}
-{{- with .Params.images -}}
-  {{- if reflect.IsSlice . -}}
-    {{- $images = . -}}
-  {{- else -}}
-    {{- $images = slice . -}}
-  {{- end -}}
-{{- else if and .Params.cover .Params.cover.image -}}
-  {{- $images = slice .Params.cover.image -}}
-{{- else if .Site.Params.images -}}
-  {{- $images = .Site.Params.images -}}
-{{- end -}}
-
-{{- range $images }}
+{{ if .Params.images }}
+  {{ range .Params.images }}
 <meta property="og:image" content="{{ . | absURL }}" />
-{{- end }}
+  {{ end }}
+{{ else if and .Params.cover .Params.cover.image }}
+<meta property="og:image" content="{{ .Params.cover.image | absURL }}" />
+{{ else if .Site.Params.images }}
+  {{ range .Site.Params.images }}
+<meta property="og:image" content="{{ . | absURL }}" />
+  {{ end }}
+{{ end }}
 
-{{- if .IsPage }}
+{{ if .IsPage }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
-{{- end }}
+{{ end }}
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{ $title }}" />
-<meta name="twitter:description" content="{{ $description }}" />
-{{- if gt (len $images) 0 }}
-<meta name="twitter:image" content="{{ index $images 0 | absURL }}" />
-{{- end }}
+<meta name="twitter:title" content="{{ .Title | default .Site.Title }}" />
+<meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}" />
