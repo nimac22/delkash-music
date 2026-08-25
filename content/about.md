@@ -1,8 +1,13 @@
 ---
 title: "درباره موسیقی دلکش"
 description: "آشنایی با مرجع متن تصنیف‌های موسیقی ایرانی؛ تاریخچه، اهداف و راه‌های ارتباط با تیم دلکش"
+layout: "single"
 ---
 
+<div class="about-hero" style="text-align:center;padding:40px 20px;background:linear-gradient(180deg,var(--surface),var(--bg-2));border-radius:20px;margin-bottom:30px;">
+  <h1 style="font-family:'Lalezar';color:var(--gold-2);font-size:2rem;margin:0 0 10px;">درباره موسیقی دلکش</h1>
+  <p style="color:var(--body);font-size:1.1rem;">گنجینهٔ تصنیف‌های موسیقی ایرانی</p>
+</div>
 
 ## موسیقی دلکش چیست؟
 
@@ -14,7 +19,7 @@ description: "آشنایی با مرجع متن تصنیف‌های موسیقی
 
 ## چه چیزی اینجا می‌یابید؟
 
--  متن کامل و دقیق تصنیف‌های ماندگار
+- 📜 متن کامل و دقیق تصنیف‌های ماندگار
 - 🎼 دسته‌بندی بر اساس دستگاه و آواز (دشتی، ماهور، بیات ترک و...)
 - 🎤 شناسنامه هر اثر: خواننده، آهنگساز، ترانه‌سرا و سال ضبط
 - 🎧 پخش آنلاین آثار
@@ -25,8 +30,10 @@ description: "آشنایی با مرجع متن تصنیف‌های موسیقی
 
 ## ارتباط و حمایت
 
-- 📮 ایمیل: info@delkash-music.ir
-- 💬 تلگرام: [delkash_music@](https://t.me/delkash_music)
-- 💛 حمایت مالی: [حمایت از دلکش](https://idpay.ir/delkash)
+- 📮 ایمیل: [info@delkash-music.ir](mailto:info@delkash-music.ir)
+- 💬 تلگرام: [@delkash_music](https://t.me/delkash_music)
+- 💛 [حمایت مالی از دلکش](https://idpay.ir/delkash)
+
+---
 
 *— تیم موسیقی دلکش*
