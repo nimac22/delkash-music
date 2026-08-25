@@ -10,7 +10,7 @@ composer: "جهانبخش پازوکی"
 lyricist: "جهانبخش پازوکی"
 dastgah: "آواز دشتی"
 cover:
-  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg"
+  images: ["https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1787262265/Hayede3.jpg"]
   hidden: true
 ---
 
