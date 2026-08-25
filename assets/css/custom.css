@@ -501,3 +501,11 @@ blockquote.refrain{
   font-weight:700;
   font-style:normal;
 }
+.hero-title {
+  font-family: "Lalezar", "Vazirmatn", sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  line-height: 1.3;
+  margin: 0 0 8px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+}
