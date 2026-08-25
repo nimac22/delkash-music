@@ -19,7 +19,7 @@ cover:
     <div class="hero-meta">
       <span>🎤 مرضیه</span>
     </div>
-    <h1>دو سه شبه که چشمام به دره</h1>
+<div class="hero-title">دو سه شبه که چشمام به دره</div>
   </div>
 </div>
 
