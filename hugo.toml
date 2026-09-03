@@ -11,6 +11,12 @@ theme = "PaperMod"
 
 [pagination]
   pagerSize = 10
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  artist = "artists"
+  composer = "composers"
+  decade = "decades"
 
 [params]
   description = "مرجع متن آهنگ و تصنیف‌های ماندگار موسیقی ایرانی — پخش آنلاین و دانلود با کیفیت بالا"
