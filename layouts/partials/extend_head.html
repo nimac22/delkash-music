@@ -1,17 +1,18 @@
-<!-- فونت‌های فارسی -->
+{{- /* فونت‌های فارسی */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap">
 
-<!-- استایل اختصاصی موسیقی دلکش (لینک مستقیم و قطعی) -->
+{{- /* استایل اختصاصی موسیقی دلکش — تنها لودر custom.css */ -}}
 {{- with resources.Get "css/custom.css" }}
   {{- $css := . | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{- end }}
 
 <meta name="theme-color" content="#151009">
+
+{{- /* ریدایرکت دامنه‌های موقت به دامنه اصلی */ -}}
 <script>
 (function(){
   var h = location.hostname;
@@ -21,25 +22,8 @@
   }
 })();
 </script>
-<!-- داده ساختاریافته Schema.org برای تصنیف‌ها -->
-{{- if and .IsPage (eq .Section "posts") }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MusicComposition",
-  "name": {{ .Title | jsonify }},
-  "description": {{ .Description | jsonify }},
-  "genre": {{ .Params.dastgah | default "" | jsonify }},
-  "composer": {{ .Params.composer | default "" | jsonify }},
-  "lyricist": {{ .Params.lyricist | default "" | jsonify }},
-  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
-  "mainEntityOfPage": {{ .Permalink | jsonify }},
-  "recordedAs": {
-    "@type": "MusicRecording",
-    "byArtist": {{ .Params.artist | default "" | jsonify }},
-    "inLanguage": "fa"{{ with .Params.audio }},
-    "audio": {{ . | jsonify }}{{ end }}
-  }
-}
-</script>
-{{- end }}
+
+{{- /* اطمینان از وجود id="main" در همه صفحات برای skip-link */ -}}
+<script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('main');if(m&&!m.id)m.id='main';});</script>
+
+{{- partial "schema-song.html" . }}
