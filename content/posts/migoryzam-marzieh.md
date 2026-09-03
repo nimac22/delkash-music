@@ -5,7 +5,7 @@ description: "متن کامل تصنیف می‌گریزم با صدای مرض�
 audio: "https://archive.org/download/migoryzam-homayoun-kazemi/migoryzam-marzieh.mp3"
 tags: ["مرضیه", "حبیب الله بدیعی", "رحیم معینی کرمانشاهی", "همایون کاظمی", "دهه ۵۰", "می‌گریزم"]
 categories: ["آواز دشتی"]
-artist: "مرضیه"
+artists: "مرضیه"
 composer: "حبیب الله بدیعی"
 lyricist: "رحیم معینی کرمانشاهی"
 dastgah: "آواز دشتی"
