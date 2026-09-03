@@ -154,9 +154,8 @@
   <section class="dk-section">
     <h2 class="dk-sec-title">خوانندگان ماندگار</h2>
     <div class="dk-artists">
-      {{- $artists := slice "هایده" "مرضیه" "محمدرضا شجریان" "پروین" "الهه" "پوران" "پریسا" }}
-      {{- range $artists }}
-        {{- with site.GetPage (printf "/tags/%s" .) }}
+     {{- range first 12 (site.Taxonomies.artists.ByCount) }}
+  {{- with .Page }}
         <a class="dk-artist" href="{{ .Permalink }}">
           <span class="av">{{ substr .Title 0 1 }}</span>
           <span>{{ .Title }}</span>
