@@ -62,7 +62,7 @@ theme = "PaperMod"
 [[menu.main]]
   identifier = "tags"
   name = "دستگاه‌های موسیقی"
-  url = "/tags/"
+  url = "/categories/"
   weight = 3
 
 [[menu.main]]
