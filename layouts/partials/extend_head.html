@@ -1,8 +1,5 @@
-{{- /* فونت‌های فارسی */ -}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap">
+{{- /* preload فونت اصلی برای LCP بهتر */ -}}
+<link rel="preload" href="/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
 {{- /* استایل اختصاصی موسیقی دلکش — تنها لودر custom.css */ -}}
 {{- with resources.Get "css/custom.css" }}
