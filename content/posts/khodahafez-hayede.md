@@ -5,7 +5,7 @@ description: "متن کامل آهنگ خداحافظ با صدای هایده (
 audio: "https://archive.org/download/khodahafez-hayede/khodahafez-hayede.mp3"
 tags: ["هایده", "جهانبخش پازوکی", "دهه ۵۰", "خداحافظ"]
 categories: ["آواز دشتی"]
-artists: "هایده"
+artist: "هایده"
 composer: "جهانبخش پازوکی"
 lyricist: "جهانبخش پازوکی"
 dastgah: "آواز دشتی"
