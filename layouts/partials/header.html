@@ -70,14 +70,14 @@
         {{- $currentPage := . -}}
         {{- range .Site.Menus.main -}}
         <li>
-          <a href="{{ .URL }}" style="
-            color: #f6eddd;
-            text-decoration: none;
-            font-size: 0.88rem;
-            padding: 8px 14px;
-            border-radius: 99px;
-            border: 1px solid transparent;
-            display: block;
+         <a href="{{ .URL }}"{{ if eq .URL $currentPage.RelPermalink }} aria-current="page"{{ end }} style="
+           color: #f6eddd;
+           text-decoration: none;
+           font-size: 0.88rem;
+           padding: 8px 14px;
+           border-radius: 99px;
+           border: 1px solid transparent;
+           display: block;
           ">{{ .Name }}</a>
         </li>
         {{- end }}
