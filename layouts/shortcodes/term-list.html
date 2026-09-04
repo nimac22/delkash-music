@@ -1,0 +1,9 @@
+{{ $tax := .Get 0 }}
+{{ $term := .Get 1 }}
+{{ with site.GetPage (printf "/%s/%s" $tax ($term | urlize)) }}
+  <ul class="dk-term-list">
+    {{- range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Params.artist }}</li>
+    {{- end }}
+  </ul>
+{{ end }}
