@@ -15,9 +15,11 @@
     font-size: 0.84rem;
     color: #b6a486;
   ">
-    <p style="margin: 0;">© {{ .Site.Title }} · تمامی حقوق محفوظ است.</p>
-    <p style="margin: 0;">
-      ساخته شده با ❤️ برای موسیقی ایرانی
+    <p style="margin:0;">© {{ now.Format "2006" }} {{ .Site.Title }} · تمامی حقوق محفوظ است.</p>
+    <p style="margin:0;display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="https://t.me/delkash_music" target="_blank" rel="noopener" style="color:#f3d28f;text-decoration:none;">کانال تلگرام</a>
+      <a href="{{ "about/" | relLangURL }}" style="color:#f3d28f;text-decoration:none;">درباره دلکش</a>
+      <a href="https://idpay.ir/delkash" target="_blank" rel="noopener" style="color:#f3d28f;text-decoration:none;">💛 حمایت مالی</a>
     </p>
   </div>
 </footer>
