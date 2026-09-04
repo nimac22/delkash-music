@@ -3,7 +3,7 @@ languageCode = "fa-ir"
 defaultContentLanguage = "fa"
 title = "موسیقی دلکش | مرجع متن آهنگ و تصنیف ایرانی"
 theme = "PaperMod"
-
+enableRobotsTXT = true
 [languages.fa]
   languageName = "فارسی"
   languageDirection = "rtl"
