@@ -9,6 +9,7 @@ cover:
   caption: "خانه جدید موسیقی دلکش"
   relative: false
   hiddenInSingle: true
+  hideFromLists: true
 ---
 
 سلام به همه دوستان و همراهان عزیز،
