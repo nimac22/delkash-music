@@ -2,7 +2,29 @@
    قالب مدرن «موسیقی دلکش» — UX حرفه‌ای
    الهام: Spotify + Genius + Apple Music
    ============================================ */
-
+/* ===== فونت‌های self-host (Commit 3) ===== */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("/fonts/Lalezar-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* ===== پایان فونت‌ها ===== */
 :root {
   --bg: #0f0a06;
   --bg-2: #161009;
