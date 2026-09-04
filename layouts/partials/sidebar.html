@@ -8,7 +8,7 @@
   <div class="widget">
     <h6>آخرین تصنیف‌ها</h6>
     <ul>
-      {{- range first 5 (where site.RegularPages "Type" "posts") }}
+      {{- range first 5 (where (where site.RegularPages "Type" "posts") "Params.hideFromLists" "ne" true) }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{- end }}
     </ul>
