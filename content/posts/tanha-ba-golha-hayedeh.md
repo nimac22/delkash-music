@@ -11,7 +11,7 @@ lyricist: "علیرضا طبائی"
 dastgah: "آواز دشتی"
 decades: ["دهه ۵۰"]
 cover:
-  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/w_1200,h_675,c_fill,g_face,q_auto,f_auto/v1788608039/hayedeh2.jpg"
+  image: "https://res.cloudinary.com/wtx6mnrm/image/upload/v1788608039/hayedeh2.jpg"
   hidden: true
 ---
 
